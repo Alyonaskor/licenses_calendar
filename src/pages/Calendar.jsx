@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ScheduleComponent, ViewsDirective, ViewDirective, Day, Week, WorkWeek, Month, Agenda, Inject, Resize, DragAndDrop, RecurrenceEditorComponent } from '@syncfusion/ej2-react-schedule';
 import { DatePickerComponent, DateTimePickerComponent } from '@syncfusion/ej2-react-calendars';
 import { Internationalization } from '@syncfusion/ej2-base';
-import { scheduleData } from '../data/dummy';
+import { scheduleData, employeesData, licensesData } from '../data/dummy';
 import { Header } from '../components';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 
@@ -28,12 +28,12 @@ const Scheduler = () => {
     {/* <tr><td className="e-textlabel">Summary</td><td style={{ colspan: '4' }}>
       <input id="Summary" className="e-field e-input" type="text" name="Subject" style={{ width: '100%' }} />
     </td></tr> */}
-    <tr><td className="e-textlabel">Status</td><td style={{ colspan: '4' }}>
-      <DropDownListComponent id="EventType" placeholder='Chooses statustypesss' data-name='EventType' className="e-field" style={{ width: '100%' }} dataSource={['New', 'Requested', 'Confirmed']}>
+    <tr><td className="e-textlabel">Teacher</td><td style={{ colspan: '4' }}>
+      <DropDownListComponent id="EventType" placeholder='Choose teacher' data-name='EventType' className="e-field" style={{ width: '100%' }} dataSource={employeesData.map((em)=> em.Name)}>
       </DropDownListComponent>
     </td></tr>
-    <tr><td className="e-textlabel">Status</td><td style={{ colspan: '4' }}>
-      <DropDownListComponent id="EventType" placeholder='Chooses statustypesss' data-name='EventType' className="e-field" style={{ width: '100%' }} dataSource={['New', 'Requested', 'Confirmed']}>
+    <tr><td className="e-textlabel">License</td><td style={{ colspan: '4' }}>
+      <DropDownListComponent id="EventType" placeholder='Choose license' data-name='EventType' className="e-field" style={{ width: '100%' }} dataSource={licensesData.map((lic)=> lic.LicenseAccount)}>
       </DropDownListComponent>
     </td></tr>
     <tr><td className="e-textlabel">From</td><td style={{ colspan: '4' }}>
@@ -62,7 +62,7 @@ const Scheduler = () => {
         eventSettings={{ dataSource: scheduleData }}
         dragStart={onDragStart}
         editorTemplate={editorTemplate}
-        // showQuickInfo={false}
+        showQuickInfo={false}
       >
         <ViewsDirective>
           { ['Day', 'Week', 'WorkWeek', 'Month', 'Agenda'].map((item) => <ViewDirective key={item} option={item} />)}

@@ -29,14 +29,19 @@ const gridEmployeeProfile = (props) => (
 );
 
 const gridEmployeeLicense = (props) => (
-  <div className="flex items-center justify-center gap-2">
+  <div className="flex items-center justify-center gap-4">
     <span>{props.License}</span>
   </div>
 );
 
 export const employeesGrid = [
+  { field: 'EmployeeID',
+    headerText: 'Employee ID',
+    width: '50',
+    textAlign: 'Center' },
+
   { headerText: 'Employee',
-    width: '150',
+    width: '100',
     template: gridEmployeeProfile,
     textAlign: 'Center' },
   { field: 'Name',
@@ -44,26 +49,12 @@ export const employeesGrid = [
     width: '0',
     textAlign: 'Center',
   },
-  { field: 'Title',
-    headerText: 'Designation',
-    width: '170',
-    textAlign: 'Center',
-  },
+ 
   { headerText: 'License',
-    width: '120',
+    width: '150',
     textAlign: 'Center',
-    template: gridEmployeeLicense },
-
-  { field: 'HireDate',
-    headerText: 'Hire Date',
-    width: '135',
-    format: 'yMd',
-    textAlign: 'Center' },
-
-  { field: 'EmployeeID',
-    headerText: 'Employee ID',
-    width: '125',
-    textAlign: 'Center' },
+    template: gridEmployeeLicense }
+  
 ];
 
 export const links = [
@@ -137,81 +128,71 @@ export const licensesGrid = [
 export const employeesData = [
   {
     EmployeeID: 1,
-    Name: 'Nancy Davolio',
-    Title: 'Sales Representative',
-    HireDate: '01/02/2021',
+    Name: 'Nancy Davolio', 
     License: 'Skype dummy license #1',
-    ReportsTo: 'Carson',
     EmployeeImage:
     avatar3,
   },
   {
     EmployeeID: 2,
     Name: 'Nasimiyu Danai',
-    Title: 'Marketing Head',
-    HireDate: '01/02/2021',
+    
     License: 'Skype dummy license #1',
-    ReportsTo: 'Carson',
+   
     EmployeeImage:
       avatar3,
   },
   {
     EmployeeID: 3,
     Name: 'Iulia Albu',
-    Title: 'HR',
-    HireDate: '01/02/2021',
+    
     License: 'Skype dummy license #1',
-    ReportsTo: 'Carson',
+   
     EmployeeImage:
       avatar4,
   },
   {
     EmployeeID: 4,
     Name: 'Siegbert Gottfried',
-    Title: 'Marketing Head',
-    HireDate: '01/02/2021',
+    
     License: 'Skype dummy license #1',
-    ReportsTo: 'Carson',
+    
     EmployeeImage:
       avatar2,
   },
   {
     EmployeeID: 5,
     Name: 'Omar Darobe',
-    Title: 'HR',
-    HireDate: '01/02/2021',
+    
     License: 'Skype dummy license #1',
-    ReportsTo: 'Carson',
+    
     EmployeeImage:
       avatar,
   },
   {
     EmployeeID: 4,
     Name: 'Penjani Inyene',
-    Title: 'Marketing Head',
-    HireDate: '01/02/2021',
+    
     License: 'Skype dummy license #1',
-    ReportsTo: 'Carson',
+   
     EmployeeImage:
       avatar,
   },
   {
     EmployeeID: 5,
     Name: 'Miron Vitold',
-    Title: 'HR',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
+    
+    License: 'Skype dummy license #1',
+   
     EmployeeImage:
       avatar2,
   },
   {
     EmployeeID: 1,
     Name: 'Nancy Davolio',
-    Title: 'Sales Representative',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
+    
+    License: 'Skype dummy license #10',
+   
     EmployeeImage:
     avatar2,
 
@@ -219,72 +200,75 @@ export const employeesData = [
   {
     EmployeeID: 2,
     Name: 'Nasimiyu Danai',
-    Title: 'Marketing Head',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
+    License: 'Skype dummy license #1',
+    EmployeeImage:
+      avatar3,
+  },
+  {
+    EmployeeID: 1,
+    Name: 'Nancy Davolio', 
+    License: 'Skype dummy license #1',
+    EmployeeImage:
+    avatar3,
+  },
+  {
+    EmployeeID: 2,
+    Name: 'Nasimiyu Danai',
+    
+    License: 'Skype dummy license #1',
+   
     EmployeeImage:
       avatar3,
   },
   {
     EmployeeID: 3,
     Name: 'Iulia Albu',
-    Title: 'HR',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
+    License: 'Skype dummy license #1',
     EmployeeImage:
       avatar4,
   },
   {
     EmployeeID: 4,
     Name: 'Siegbert Gottfried',
-    Title: 'Marketing Head',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
+    License: 'Skype dummy license #1', 
     EmployeeImage:
       avatar2,
   },
   {
     EmployeeID: 5,
     Name: 'Omar Darobe',
-    Title: 'HR',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
+    License: 'Skype dummy license #1',
     EmployeeImage:
       avatar,
   },
   {
     EmployeeID: 4,
     Name: 'Penjani Inyene',
-    Title: 'Marketing Head',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
+    License: 'Skype dummy license #1',
     EmployeeImage:
       avatar,
   },
   {
     EmployeeID: 5,
     Name: 'Miron Vitold',
-    Title: 'HR',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
+    License: 'Skype dummy license #1',
     EmployeeImage:
       avatar2,
   },
   {
     EmployeeID: 1,
     Name: 'Nancy Davolio',
-    Title: 'Sales Representative',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
+    License: 'Skype dummy license #10',
     EmployeeImage:
-    avatar,
+    avatar2,
+
+  },
+  {
+    EmployeeID: 2,
+    Name: 'Nasimiyu Danai',
+    License: 'Skype dummy license #1',
+    EmployeeImage:
+      avatar3,
   },
 ];
 
